@@ -1,4 +1,4 @@
-function AddParticle(particleName, particleTint)
+function AddParticle(particleName)
   data:extend(
   {
     {--prototype for particles that fly out when you hand mine the ore in the ground
@@ -9,32 +9,28 @@ function AddParticle(particleName, particleTint)
       pictures =
       {
         {
-          filename = "__leighzerscienceores__/graphics/entity/ore-particle/ore-particle-1.png",
-          tint=particleTint,
+          filename = "__leighzerscienceores__/graphics/entity/ore-particle/"..particleName.."-science-ore-particle-1.png",          
           priority = "extra-high",
           width = 16,
           height = 16,
           frame_count = 1
         },
         {
-          filename = "__leighzerscienceores__/graphics/entity/ore-particle/ore-particle-2.png",
-          tint=particleTint,
+          filename = "__leighzerscienceores__/graphics/entity/ore-particle/"..particleName.."-science-ore-particle-2.png",          
           priority = "extra-high",
           width = 16,
           height = 16,
           frame_count = 1
         },
         {
-          filename = "__leighzerscienceores__/graphics/entity/ore-particle/ore-particle-3.png",
-          tint=particleTint,
+          filename = "__leighzerscienceores__/graphics/entity/ore-particle/"..particleName.."-science-ore-particle-3.png",          
           priority = "extra-high",
           width = 16,
           height = 16,
           frame_count = 1
         },
         {
-          filename = "__leighzerscienceores__/graphics/entity/ore-particle/ore-particle-4.png",
-          tint=particleTint,
+          filename = "__leighzerscienceores__/graphics/entity/ore-particle/"..particleName.."-science-ore-particle-4.png",          
           priority = "extra-high",
           width = 16,
           height = 16,
@@ -77,10 +73,24 @@ function AddParticle(particleName, particleTint)
 end
 
 --quick and dirty method call to give all ores different ore particles, probably will make custom graphics down the road
-AddParticle('automation',leighzermods.leighzerscienceores.tints.automation)
-AddParticle('logistic',leighzermods.leighzerscienceores.tints.logistic)
-AddParticle('military',leighzermods.leighzerscienceores.tints.military)
-AddParticle('chemical',leighzermods.leighzerscienceores.tints.chemical)
-AddParticle('production',leighzermods.leighzerscienceores.tints.production)
-AddParticle('utility',leighzermods.leighzerscienceores.tints.utility)
-AddParticle('space',leighzermods.leighzerscienceores.tints.space)
+if leighzermods.leighzerscienceores.automationEnabled then
+  AddParticle('automation')
+end
+if leighzermods.leighzerscienceores.logisticEnabled then
+  AddParticle('logistic')
+end
+if leighzermods.leighzerscienceores.militaryEnabled then
+  AddParticle('military')
+end
+if leighzermods.leighzerscienceores.chemicalEnabled then
+  AddParticle('chemical')
+end
+if leighzermods.leighzerscienceores.productionEnabled then
+  AddParticle('production')
+end
+if leighzermods.leighzerscienceores.utilityEnabled then
+  AddParticle('utility')
+end
+if leighzermods.leighzerscienceores.spaceEnabled then
+  AddParticle('space')
+end

@@ -84,6 +84,4 @@ data:extend(
     type = "noise-layer",
     name = "space-science-ore"
     },
-    
-
 })
