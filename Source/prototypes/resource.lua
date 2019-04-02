@@ -1,5 +1,5 @@
 
-function AddResource(resourceName, mapColor)
+function AddResource(resourceName)
   data:extend({   
     {
     type = "resource",
@@ -8,7 +8,7 @@ function AddResource(resourceName, mapColor)
     icon_size = 32,
     flags = {"placeable-neutral"},
     order="h",
-    map_color = mapColor,--color used for ore patch when viewed from mini map
+    map_color = leighzermods.leighzerscienceores.tints[resourceName],--color used for ore patch when viewed from mini map
     minable =
     {     
       mining_particle = resourceName.."-science-ore-particle",
@@ -17,23 +17,16 @@ function AddResource(resourceName, mapColor)
     },
     collision_box = {{ -0.1, -0.1}, {0.1, 0.1}},
     selection_box = {{ -0.5, -0.5}, {0.5, 0.5}},
-    autoplace =
+    autoplace = 
     {
+      control = resourceName.."-science-ore",
+      coverage = 0.0027090909090909094,
       order = "x",
-      name = resourceName .. "-science-ore",
-      sharpness = 15/16,
-      richness_multiplier = leighzermods.leighzerscienceores.richness_multiplier,
-      richness_base = leighzermods.leighzerscienceores.richness_base,
+      peaks = GetPeak(resourceName,leighzermods.leighzerscienceores.isStartingAreaEnabled[resourceName]),
+      richness_base = 10,
+      richness_multiplier = 1500,
       richness_multiplier_distance_bonus = 20,
-      coverage = leighzermods.leighzerscienceores.coverage,
-      peaks =
-      {
-        {
-          noise_layer = resourceName .. "-science-ore",
-          noise_octaves_difference = -0.85,
-          noise_persistence = 0.4
-        }
-      },    
+      sharpness = 0.9375,      
     },
     stage_counts = {15000, 8000, 4000, 2000, 1000, 500, 200, 80},
     stages =
@@ -52,24 +45,54 @@ function AddResource(resourceName, mapColor)
   })
 end
 
+function GetPeak(resourceName,isStartingAreaEnabled)
+
+  local peak = {}
+  if isStartingAreaEnabled then
+    peak = {
+      {
+        noise_layer = resourceName.."-science-ore",
+        noise_octaves_difference = -0.85,
+        noise_persistence = 0.4
+      }
+    }
+  else
+    peak = {
+      {
+        noise_layer = resourceName.."-science-ore",
+        noise_octaves_difference = -0.85,
+        noise_persistence = 0.4
+      },
+      {
+        influence = -1,
+        starting_area_weight_max_range = 2,
+        starting_area_weight_optimal = 1,
+        starting_area_weight_range = 0
+      }
+    }
+  end
+    return peak
+
+end
+
 if leighzermods.leighzerscienceores.automationEnabled then
-  AddResource('automation',leighzermods.leighzerscienceores.tints.automation)
+  AddResource('automation')
 end
 if leighzermods.leighzerscienceores.logisticEnabled then
-  AddResource('logistic',leighzermods.leighzerscienceores.tints.logistic)
+  AddResource('logistic')
 end
 if leighzermods.leighzerscienceores.militaryEnabled then
-  AddResource('military',leighzermods.leighzerscienceores.tints.military)
+  AddResource('military')
 end
 if leighzermods.leighzerscienceores.chemicalEnabled then
-  AddResource('chemical',leighzermods.leighzerscienceores.tints.chemical)
+  AddResource('chemical')
 end
 if leighzermods.leighzerscienceores.productionEnabled then
-  AddResource('production',leighzermods.leighzerscienceores.tints.production)
+  AddResource('production')
 end
 if leighzermods.leighzerscienceores.utilityEnabled then
-  AddResource('utility',leighzermods.leighzerscienceores.tints.utility)
+  AddResource('utility')
 end
 if leighzermods.leighzerscienceores.spaceEnabled then
-  AddResource('space',leighzermods.leighzerscienceores.tints.space)
+  AddResource('space')
 end

@@ -2,10 +2,17 @@ data:extend(
 {  --prototypes for mod settings menu
     {
         type = "bool-setting",
-        name = "isAutomationScienceOreEnabled",
+        name = "excludeHighTechOresFromStartingArea",
         setting_type = "startup",
         default_value = true,
         order = "a"
+    },
+    {
+        type = "bool-setting",
+        name = "isAutomationScienceOreEnabled",
+        setting_type = "startup",
+        default_value = true,
+        order = "b"
     },
     {
         type = "int-setting",
@@ -14,7 +21,7 @@ data:extend(
         default_value = 1,
         minimum_value = 1,
         maximum_value = 100000,
-        order = "b"
+        order = "c"
     },
 
     {
@@ -22,7 +29,7 @@ data:extend(
         name = "isLogisticScienceOreEnabled",
         setting_type = "startup",
         default_value = true,
-        order = "c"
+        order = "d"
     },
     {
         type = "int-setting",
@@ -31,7 +38,7 @@ data:extend(
         default_value = 10,
         minimum_value = 1,
         maximum_value = 100000,
-        order = "d"
+        order = "e"
     },
 
     {
@@ -39,7 +46,7 @@ data:extend(
         name = "isMilitaryScienceOreEnabled",
         setting_type = "startup",
         default_value = true,
-        order = "e"
+        order = "f"
     },
     {
         type = "int-setting",
@@ -48,7 +55,7 @@ data:extend(
         default_value = 25,
         minimum_value = 1,
         maximum_value = 100000,
-        order = "f"
+        order = "g"
     },
 
     {
@@ -56,7 +63,7 @@ data:extend(
         name = "isChemicalScienceOreEnabled",
         setting_type = "startup",
         default_value = true,
-        order = "g"
+        order = "h"
     },
     {
         type = "int-setting",
@@ -65,7 +72,7 @@ data:extend(
         default_value = 100,
         minimum_value = 1,
         maximum_value = 100000,
-        order = "h"
+        order = "i"
     },
 
     {
@@ -73,7 +80,7 @@ data:extend(
         name = "isProductionScienceOreEnabled",
         setting_type = "startup",
         default_value = true,
-        order = "i"
+        order = "j"
     },
     {
         type = "int-setting",
@@ -82,7 +89,7 @@ data:extend(
         default_value = 250,
         minimum_value = 1,
         maximum_value = 100000,
-        order = "j"
+        order = "k"
     },
 
     {
@@ -90,7 +97,7 @@ data:extend(
         name = "isUtilityScienceOreEnabled",
         setting_type = "startup",
         default_value = true,
-        order = "k"
+        order = "l"
     },
     {
         type = "int-setting",
@@ -99,7 +106,7 @@ data:extend(
         default_value = 500,
         minimum_value = 1,
         maximum_value = 100000,
-        order = "l"
+        order = "m"
     },
 
     {
@@ -107,7 +114,7 @@ data:extend(
         name = "isSpaceScienceOreEnabled",
         setting_type = "startup",
         default_value = true,
-        order = "m"
+        order = "n"
     },
     {
         type = "int-setting",
@@ -116,7 +123,7 @@ data:extend(
         default_value = 1000,
         minimum_value = 1,
         maximum_value = 100000,
-        order = "n"
+        order = "o"
     },
 })
 

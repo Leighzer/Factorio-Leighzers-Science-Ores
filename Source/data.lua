@@ -3,11 +3,9 @@ if not leighzermods then --generic mod variable to store information that may be
 end
 
 if not leighzermods.leighzerscienceores then
-    leighzermods.leighzerscienceores = {}
+    leighzermods.leighzerscienceores = {}   
 
-    leighzermods.leighzerscienceores.coverage = ((0.006 / 3) / 1.1) 
-    leighzermods.leighzerscienceores.richness_multiplier = 1500
-    leighzermods.leighzerscienceores.richness_base = 10
+    
 
     leighzermods.leighzerscienceores.tints = {}
     leighzermods.leighzerscienceores.tints.automation = {r=219/255, g=50/255, b=50/255, a = 1}
@@ -34,10 +32,30 @@ if not leighzermods.leighzerscienceores then
     leighzermods.leighzerscienceores.utilityRequirement = settings.startup["UtilityScienceOreRequirement"].value
     leighzermods.leighzerscienceores.spaceRequirement = settings.startup["SpaceScienceOreRequirement"].value
 
+    leighzermods.leighzerscienceores.excludeHighTechOresFromStartingArea = settings.startup["excludeHighTechOresFromStartingArea"].value
+    leighzermods.leighzerscienceores.isStartingAreaEnabled = {}
+
+    if leighzermods.leighzerscienceores.excludeHighTechOresFromStartingArea then
+        leighzermods.leighzerscienceores.isStartingAreaEnabled.automation = true
+        leighzermods.leighzerscienceores.isStartingAreaEnabled.logistic = true
+        leighzermods.leighzerscienceores.isStartingAreaEnabled.military = true
+        leighzermods.leighzerscienceores.isStartingAreaEnabled.chemical = true
+        leighzermods.leighzerscienceores.isStartingAreaEnabled.production = false
+        leighzermods.leighzerscienceores.isStartingAreaEnabled.utility = false
+        leighzermods.leighzerscienceores.isStartingAreaEnabled.space = false
+    else
+        leighzermods.leighzerscienceores.isStartingAreaEnabled.automation = true
+        leighzermods.leighzerscienceores.isStartingAreaEnabled.logistic = true
+        leighzermods.leighzerscienceores.isStartingAreaEnabled.military = true
+        leighzermods.leighzerscienceores.isStartingAreaEnabled.chemical = true
+        leighzermods.leighzerscienceores.isStartingAreaEnabled.production = true
+        leighzermods.leighzerscienceores.isStartingAreaEnabled.utility = true
+        leighzermods.leighzerscienceores.isStartingAreaEnabled.space = true
+    end
 end
 
-if not leighzermods.productivityEnabledRecipes then --list of recipe names that are going to get productivity modules enabled
-    leighzermods.productivityEnabledRecipes = {}
+if not leighzermods.leighzerscienceores.productivityEnabledRecipes then --list of recipe names that are going to get productivity modules enabled
+    leighzermods.leighzerscienceores.productivityEnabledRecipes = {}
 end
 
 require("prototypes.particle")

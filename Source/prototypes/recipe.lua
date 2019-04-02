@@ -12,7 +12,7 @@ if leighzermods.leighzerscienceores.automationEnabled then
         order = "z-a"
         }
     })
-    table.insert(leighzermods.productivityEnabledRecipes,'automation-science-ore-to-science')
+    table.insert(leighzermods.leighzerscienceores.productivityEnabledRecipes,'automation-science-ore-to-science')
 
 end
 
@@ -31,7 +31,7 @@ if leighzermods.leighzerscienceores.logisticEnabled then
         }
     })
     table.insert(data.raw["technology"]["logistic-science-pack"].effects, {type = "unlock-recipe",recipe = "logistic-science-ore-to-science"})
-    table.insert(leighzermods.productivityEnabledRecipes,'logistic-science-ore-to-science')
+    table.insert(leighzermods.leighzerscienceores.productivityEnabledRecipes,'logistic-science-ore-to-science')
 
 end
 
@@ -50,7 +50,7 @@ if leighzermods.leighzerscienceores.militaryEnabled then
         }
     })
     table.insert(data.raw["technology"]["military-science-pack"].effects, {type = "unlock-recipe",recipe = "military-science-ore-to-science"})
-    table.insert(leighzermods.productivityEnabledRecipes,'military-science-ore-to-science')
+    table.insert(leighzermods.leighzerscienceores.productivityEnabledRecipes,'military-science-ore-to-science')
 
 end
 
@@ -69,7 +69,7 @@ if leighzermods.leighzerscienceores.chemicalEnabled then
         }
     })
     table.insert(data.raw["technology"]["chemical-science-pack"].effects, {type = "unlock-recipe",recipe = "chemical-science-ore-to-science"})
-    table.insert(leighzermods.productivityEnabledRecipes,'chemical-science-ore-to-science')
+    table.insert(leighzermods.leighzerscienceores.productivityEnabledRecipes,'chemical-science-ore-to-science')
 
 end
 
@@ -88,7 +88,7 @@ if leighzermods.leighzerscienceores.productionEnabled then
         }
     })
     table.insert(data.raw["technology"]["production-science-pack"].effects, {type = "unlock-recipe",recipe = "production-science-ore-to-science"})
-    table.insert(leighzermods.productivityEnabledRecipes,'production-science-ore-to-science')
+    table.insert(leighzermods.leighzerscienceores.productivityEnabledRecipes,'production-science-ore-to-science')
 
 end
 
@@ -107,7 +107,7 @@ if leighzermods.leighzerscienceores.utilityEnabled then
         }
     })
     table.insert(data.raw["technology"]["utility-science-pack"].effects, {type = "unlock-recipe",recipe = "utility-science-ore-to-science"})
-    table.insert(leighzermods.productivityEnabledRecipes,'utility-science-ore-to-science')
+    table.insert(leighzermods.leighzerscienceores.productivityEnabledRecipes,'utility-science-ore-to-science')
 
 end
 
@@ -126,14 +126,14 @@ if leighzermods.leighzerscienceores.spaceEnabled then
         }
     })
     table.insert(data.raw["technology"]["space-science-pack"].effects, {type = "unlock-recipe",recipe = "space-science-ore-to-science"})
-    table.insert(leighzermods.productivityEnabledRecipes,'space-science-ore-to-science')
+    table.insert(leighzermods.leighzerscienceores.productivityEnabledRecipes,'space-science-ore-to-science')
 end
 
 --update table add recipes we want to be able to PROD module
---leighzermodds.productivityEnabledRecipes is the list of recipe names we want to allow the use of productivity modules with
+--leighzermodds.leighzerscienceores.productivityEnabledRecipes is the list of recipe names we want to allow the use of productivity modules with
 for k, v in pairs(data.raw.module) do
     if v.name:find("productivity%-module") and v.limitation then
-      for _, recipe in ipairs(leighzermods.productivityEnabledRecipes) do
+      for _, recipe in ipairs(leighzermods.leighzerscienceores.productivityEnabledRecipes) do
         if data.raw["recipe"][recipe] then
           table.insert(v.limitation, recipe)
         end
