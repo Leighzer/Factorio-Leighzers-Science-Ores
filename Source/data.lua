@@ -62,6 +62,7 @@ require("prototypes.particle")
 require("prototypes.mapgen")
 require("prototypes.resource")
 
+require("prototypes.category")
 require("prototypes.item")
 require("prototypes.recipe")
 

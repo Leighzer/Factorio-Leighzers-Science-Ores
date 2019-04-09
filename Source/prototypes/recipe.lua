@@ -9,6 +9,7 @@ if leighzermods.leighzerscienceores.automationEnabled then
         ingredients = {{"automation-science-ore", leighzermods.leighzerscienceores.automationRequirement}},
         result = "automation-science-pack",
         result_count = 1,
+        subgroup = "leighzerscienceore",
         order = "z-a"
         }
     })
@@ -27,6 +28,7 @@ if leighzermods.leighzerscienceores.logisticEnabled then
         ingredients = {{"logistic-science-ore", leighzermods.leighzerscienceores.logisticRequirement}},
         result = "logistic-science-pack",
         result_count = 1,
+        subgroup = "leighzerscienceore",
         order = "z-b"
         }
     })
@@ -46,6 +48,7 @@ if leighzermods.leighzerscienceores.militaryEnabled then
         ingredients = {{"military-science-ore", leighzermods.leighzerscienceores.militaryRequirement}},
         result = "military-science-pack",
         result_count = 1,
+        subgroup = "leighzerscienceore",
         order = "z-c"
         }
     })
@@ -65,6 +68,7 @@ if leighzermods.leighzerscienceores.chemicalEnabled then
         ingredients = {{"chemical-science-ore", leighzermods.leighzerscienceores.chemicalRequirement}},
         result = "chemical-science-pack",
         result_count = 1,
+        subgroup = "leighzerscienceore",
         order = "z-d"
         }
     })
@@ -84,6 +88,7 @@ if leighzermods.leighzerscienceores.productionEnabled then
         ingredients = {{"production-science-ore", leighzermods.leighzerscienceores.productionRequirement}},
         result = "production-science-pack",
         result_count = 1,
+        subgroup = "leighzerscienceore",
         order = "z-e"
         }
     })
@@ -103,6 +108,7 @@ if leighzermods.leighzerscienceores.utilityEnabled then
         ingredients = {{"utility-science-ore", leighzermods.leighzerscienceores.utilityRequirement}},
         result = "utility-science-pack",
         result_count = 1,
+        subgroup = "leighzerscienceore",
         order = "z-f"
         }
     })
@@ -122,6 +128,7 @@ if leighzermods.leighzerscienceores.spaceEnabled then
         ingredients = {{"space-science-ore", leighzermods.leighzerscienceores.spaceRequirement}},
         result = "space-science-pack",
         result_count = 1,
+        subgroup = "leighzerscienceore",
         order = "z-g"
         }
     })
