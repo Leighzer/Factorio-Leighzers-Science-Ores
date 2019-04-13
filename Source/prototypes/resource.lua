@@ -4,7 +4,7 @@ function AddResource(resourceName)
     {
     type = "resource",
     name = resourceName .. "-science-ore",
-    icons = {{icon = "__leighzerscienceores__/graphics/icons/"..resourceName.."-science-ore.png"}},
+    icon = "__leighzerscienceores__/graphics/icons/"..resourceName.."-science-ore.png",
     icon_size = 32,
     flags = {"placeable-neutral"},
     order="h",
