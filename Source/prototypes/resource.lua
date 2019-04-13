@@ -1,5 +1,5 @@
 
-function AddResource(resourceName)
+function AddResource(resourceName,hasStartingAreaPlacement)
   data:extend({   
     {
     type = "resource",
@@ -17,17 +17,16 @@ function AddResource(resourceName)
     },
     collision_box = {{ -0.1, -0.1}, {0.1, 0.1}},
     selection_box = {{ -0.5, -0.5}, {0.5, 0.5}},
-    autoplace = 
-    {
-      control = resourceName.."-science-ore",
-      coverage = 0.0027090909090909094,
+    autoplace = resource_autoplace.resource_autoplace_settings{
+      name = resourceName.."-science-ore",
       order = "x",
-      peaks = GetPeak(resourceName,leighzermods.leighzerscienceores.isStartingAreaEnabled[resourceName]),
-      richness_base = 10,
-      richness_multiplier = 1500,
-      richness_multiplier_distance_bonus = 20,
-      sharpness = 0.9375,      
+      base_density = 10,
+      has_starting_area_placement = hasStartingAreaPlacement,
+      resource_index = resource_autoplace.get_next_resource_index() + 64,
+      regular_rq_factor_multiplier = 1.10,
+      starting_rq_factor_multiplier = 1.5
     },
+
     stage_counts = {15000, 8000, 4000, 2000, 1000, 500, 200, 80},
     stages =
       {
@@ -76,23 +75,23 @@ function GetPeak(resourceName,isStartingAreaEnabled)
 end
 
 if leighzermods.leighzerscienceores.automationEnabled then
-  AddResource('automation')
+  AddResource('automation',leighzermods.leighzerscienceores.isStartingAreaEnabled.automation)
 end
 if leighzermods.leighzerscienceores.logisticEnabled then
-  AddResource('logistic')
+  AddResource('logistic',leighzermods.leighzerscienceores.isStartingAreaEnabled.logistic)
 end
 if leighzermods.leighzerscienceores.militaryEnabled then
-  AddResource('military')
+  AddResource('military',leighzermods.leighzerscienceores.isStartingAreaEnabled.military)
 end
 if leighzermods.leighzerscienceores.chemicalEnabled then
-  AddResource('chemical')
+  AddResource('chemical',leighzermods.leighzerscienceores.isStartingAreaEnabled.chemical)
 end
 if leighzermods.leighzerscienceores.productionEnabled then
-  AddResource('production')
+  AddResource('production',leighzermods.leighzerscienceores.isStartingAreaEnabled.production)
 end
 if leighzermods.leighzerscienceores.utilityEnabled then
-  AddResource('utility')
+  AddResource('utility',leighzermods.leighzerscienceores.isStartingAreaEnabled.utility)
 end
 if leighzermods.leighzerscienceores.spaceEnabled then
-  AddResource('space')
+  AddResource('space',leighzermods.leighzerscienceores.isStartingAreaEnabled.space)
 end
