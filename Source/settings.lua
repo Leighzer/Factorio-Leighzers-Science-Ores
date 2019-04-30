@@ -127,6 +127,27 @@ data:extend(
     },
 })
 
+if mods["bobtech"] then
+    data:extend({        
+        {
+            type = "bool-setting",
+            name = "isAdvancedLogisticScienceOreEnabled",
+            setting_type = "startup",
+            default_value = true,
+            order = "i-a"
+        },
+        {
+            type = "int-setting",
+            name = "AdvancedLogisticScienceOreRequirement",
+            setting_type = "startup",
+            default_value = 175,
+            minimum_value = 1,
+            maximum_value = 100000,
+            order = "i-b"
+        }        
+    })
+end
+
 
 
 

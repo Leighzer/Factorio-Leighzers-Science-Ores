@@ -94,3 +94,7 @@ end
 if leighzermods.leighzerscienceores.spaceEnabled then
   AddParticle('space')
 end
+
+if mods["bobtech"] and leighzermods.leighzerscienceores.advancedLogisticEnabled then
+  AddParticle('advanced-logistic')
+end
