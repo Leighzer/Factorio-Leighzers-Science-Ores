@@ -16,11 +16,45 @@ data:extend(
 })
 end
 
+function AddLogisticScienceOreMapGen()
+    if mods["bobtech"] then
+        data:extend(
+        {
+            {
+                type = "autoplace-control",
+                name = "transport-science-ore",
+                richness = true,
+                order = "z-b",
+                category="resource",        
+            },
+            {
+            type = "noise-layer",
+            name = "logistic-science-ore",    
+            },
+        })        
+    else
+        data:extend(
+        {
+            {
+                type = "autoplace-control",
+                name = "logistic-science-ore",
+                richness = true,
+                order = "z-b",
+                category="resource",        
+            },
+            {
+            type = "noise-layer",
+            name = "logistic-science-ore",    
+            },
+        }) 
+    end
+end
+
 if leighzermods.leighzerscienceores.automationEnabled then
     AddMapGen("automation-science", "z-a")
 end
 if leighzermods.leighzerscienceores.logisticEnabled then
-    AddMapGen("logistic-science", "z-b")
+    AddLogisticScienceOreMapGen()
 end
 if leighzermods.leighzerscienceores.militaryEnabled then
     AddMapGen("military-science", "z-c")

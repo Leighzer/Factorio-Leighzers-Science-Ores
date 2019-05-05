@@ -139,7 +139,7 @@ if mods["bobtech"] and leighzermods.leighzerscienceores.advancedLogisticEnabled 
     data:extend({
         {
     type = "recipe",
-    name = "advanced-logistic-ore-to-science",
+    name = "advanced-logistic-science-ore-to-science",
     energy_required = 21,
     enabled = false,
     category = "crafting",--basic crafting category, this means tier one assembler and up can craft, or you can craft by hand
@@ -150,8 +150,8 @@ if mods["bobtech"] and leighzermods.leighzerscienceores.advancedLogisticEnabled 
     order = "z-d-a"
     }
 })
-table.insert(data.raw["technology"]["advanced-logistic-science-pack"].effects, {type = "unlock-recipe",recipe = "advanced-logistic-ore-to-science"})
-table.insert(leighzermods.leighzerscienceores.productivityEnabledRecipes,'advanced-logistic-ore-to-science')
+table.insert(data.raw["technology"]["advanced-logistic-science-pack"].effects, {type = "unlock-recipe",recipe = "advanced-logistic-science-ore-to-science"})
+table.insert(leighzermods.leighzerscienceores.productivityEnabledRecipes,"advanced-logistic-science-ore-to-science")
 end
 
 --update table add recipes we want to be able to PROD module

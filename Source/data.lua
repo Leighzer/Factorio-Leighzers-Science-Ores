@@ -13,7 +13,7 @@ if not leighzermods.leighzerscienceores then
     leighzermods.leighzerscienceores.tints.production = {r=152/255, g=26/255, b=202/255, a = 1}--71.6,0.0,100
     leighzermods.leighzerscienceores.tints.utility = {r=208/255, g=177/255, b=20/255, a = 1}--71.6,60.9,6.9
     leighzermods.leighzerscienceores.tints.space = {r=222/255, g=222/255, b=222/255, a = 1}--57.3,57.3,57.3
-    leighzermods.leighzerscienceores.tints.advancedLogistic = {100,0,66.7}--100, 0, 66.7
+    leighzermods.leighzerscienceores.tints.advancedLogistic = {100/255,0/255,66.7/255}--100, 0, 66.7
 
     leighzermods.leighzerscienceores.automationEnabled = settings.startup["isAutomationScienceOreEnabled"].value
     leighzermods.leighzerscienceores.logisticEnabled = settings.startup["isLogisticScienceOreEnabled"].value
@@ -69,9 +69,10 @@ if not leighzermods.leighzerscienceores.productivityEnabledRecipes then --list o
     leighzermods.leighzerscienceores.productivityEnabledRecipes = {}
 end
 
+require("prototypes.resource")
 require("prototypes.particle")
 require("prototypes.mapgen")
-require("prototypes.resource")
+
 
 require("prototypes.category")
 require("prototypes.item")

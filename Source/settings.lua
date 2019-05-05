@@ -22,25 +22,7 @@ data:extend(
         minimum_value = 1,
         maximum_value = 100000,
         order = "c"
-    },
-
-    {
-        type = "bool-setting",
-        name = "isLogisticScienceOreEnabled",
-        setting_type = "startup",
-        default_value = true,
-        order = "d"
-    },
-    {
-        type = "int-setting",
-        name = "LogisticScienceOreRequirement",
-        setting_type = "startup",
-        default_value = 10,
-        minimum_value = 1,
-        maximum_value = 100000,
-        order = "e"
-    },
-
+    },  
     {
         type = "bool-setting",
         name = "isMilitaryScienceOreEnabled",
@@ -57,7 +39,6 @@ data:extend(
         maximum_value = 100000,
         order = "g"
     },
-
     {
         type = "bool-setting",
         name = "isChemicalScienceOreEnabled",
@@ -144,8 +125,51 @@ if mods["bobtech"] then
             minimum_value = 1,
             maximum_value = 100000,
             order = "i-b"
-        }        
+        },
+        {
+            type = "bool-setting",
+            name = "isLogisticScienceOreEnabled",
+            setting_type = "startup",
+            default_value = true,
+            order = "d",
+            localised_name = {"mod-setting-name.isLogisticScienceOreEnabled", "Transport"},
+            localised_description = {"mod-setting-description.isLogisticScienceOreEnabled", "Transport"}
+        },
+        {
+            type = "int-setting",
+            name = "LogisticScienceOreRequirement",
+            setting_type = "startup",
+            default_value = 10,
+            minimum_value = 1,
+            maximum_value = 100000,
+            order = "e",
+            localised_name = {"mod-setting-name.LogisticScienceOreRequirement", "Transport"}
+        },        
     })
+
+else
+    data:extend({
+        {
+            type = "bool-setting",
+            name = "isLogisticScienceOreEnabled",
+            setting_type = "startup",
+            default_value = true,
+            order = "d",
+            localised_name = {"mod-setting-name.isLogisticScienceOreEnabled", "Logistic"},
+            localised_description = {"mod-setting-description.isLogisticScienceOreEnabled", "Logistic"}
+        },
+        {
+            type = "int-setting",
+            name = "LogisticScienceOreRequirement",
+            setting_type = "startup",
+            default_value = 10,
+            minimum_value = 1,
+            maximum_value = 100000,
+            order = "e",
+            localised_name = {"mod-setting-name.LogisticScienceOreRequirement", "Logistic"}
+
+        }
+    })    
 end
 
 
