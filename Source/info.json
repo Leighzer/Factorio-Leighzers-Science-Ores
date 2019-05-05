@@ -6,6 +6,6 @@
   "contact": "Please message me on the factorio forums my username is leighzer.",
   "homepage": "",
   "factorio_version": "0.17",
-  "dependencies": [ "base >= 0.17", "? bobtech >= 0.17.2" ],
+  "dependencies": [ "base >= 0.17", "? bobtech >= 0.17.2", "? rso-mod >= 4.1.2" ],
   "description": "Configurable mod that adds supplemental ores. These new ores can be processed into science packs."
 }
