@@ -1,0 +1,48 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.1.8
+  Changes:
+    - Added proper changelog.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.1.7
+  Bugfixes:
+    - info.json fix
+
+---------------------------------------------------------------------------------------------------
+Version: 0.1.6
+  Changes:
+    - Functionality with Bob's Tech with help from sidelia.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.1.5
+  Changes:
+    - Upgradded to 0.17 ore patch placement.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.1.4
+  Changes:
+    - Added Quarry mod compatibility.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.1.3
+  Changes:
+    - Moved recipes to own row in crafting menu.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.1.2
+  Changes:
+    - Added mod setting to exclude ores that are a higher tech level than Chemical science from the starting area.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+  Changes:
+    - New and improved graphics!
+
+  Bugfixes:
+    - Fixed locale for mod settings.
+    
+
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+  Changes:
+    - Initial release.
