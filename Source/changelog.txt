@@ -39,8 +39,7 @@ Version: 0.1.1
     - New and improved graphics!
 
   Bugfixes:
-    - Fixed locale for mod settings.
-    
+    - Fixed locale for mod settings.    
 
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.0
