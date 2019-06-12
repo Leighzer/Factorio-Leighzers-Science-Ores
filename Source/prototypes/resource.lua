@@ -46,8 +46,8 @@ end
 
 function AddLogisticScienceOreEntity()
   local autoplaceName = "logistic"
-  if mods["bobtech"] then
-    autoplaceName = "transport"
+  if mods["bobtech"] and not mods["space-exploration"] then
+    autoplaceName = "transport"  
   end
   data:extend({   
     {

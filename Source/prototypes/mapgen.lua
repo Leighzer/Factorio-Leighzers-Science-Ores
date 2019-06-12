@@ -17,7 +17,7 @@ data:extend(
 end
 
 function AddLogisticScienceOreMapGen()
-    if mods["bobtech"] then
+    if mods["bobtech"] and not mods["space-exploration"] then
         data:extend(
         {
             {
@@ -25,7 +25,7 @@ function AddLogisticScienceOreMapGen()
                 name = "transport-science-ore",
                 richness = true,
                 order = "z-b",
-                category="resource",        
+                category="resource",                        
             },
             {
             type = "noise-layer",
