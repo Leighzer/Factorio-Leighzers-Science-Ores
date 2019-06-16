@@ -16,38 +16,27 @@ data:extend(
 })
 end
 
-function AddLogisticScienceOreMapGen()
-    if mods["bobtech"] and not mods["space-exploration"] then
-        data:extend(
-        {
-            {
-                type = "autoplace-control",
-                name = "transport-science-ore",
-                richness = true,
-                order = "z-b",
-                category="resource",                        
-            },
-            {
-            type = "noise-layer",
-            name = "logistic-science-ore",    
-            },
-        })        
-    else
-        data:extend(
-        {
-            {
-                type = "autoplace-control",
-                name = "logistic-science-ore",
-                richness = true,
-                order = "z-b",
-                category="resource",        
-            },
-            {
-            type = "noise-layer",
-            name = "logistic-science-ore",    
-            },
-        }) 
+function AddLogisticScienceOreMapGen()    
+        
+    local logistic_localised_name = {"autoplace-control-names.logistic-science-ore","Logistic"}
+    if mods["bobtech"] then
+        logistic_localised_name = {"autoplace-control-names.logistic-science-ore","Transport"}
     end
+    data:extend(
+    {
+        {
+            type = "autoplace-control",
+            name = "logistic-science-ore",
+            richness = true,
+            order = "z-b",
+            category="resource",
+            localised_name = logistic_localised_name
+        },
+        {
+        type = "noise-layer",
+        name = "logistic-science-ore",    
+        },
+    })            
 end
 
 if leighzermods.leighzerscienceores.automationEnabled then

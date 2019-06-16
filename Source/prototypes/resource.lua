@@ -44,11 +44,7 @@ function AddResource(resourceName,hasStartingAreaPlacement)
   })
 end
 
-function AddLogisticScienceOreEntity()
-  local autoplaceName = "logistic"
-  if mods["bobtech"] and not mods["space-exploration"] then
-    autoplaceName = "transport"  
-  end
+function AddLogisticScienceOreEntity()  
   data:extend({   
     {
     type = "resource",
@@ -69,7 +65,7 @@ function AddLogisticScienceOreEntity()
     collision_box = {{ -0.1, -0.1}, {0.1, 0.1}},
     selection_box = {{ -0.5, -0.5}, {0.5, 0.5}},
     autoplace = resource_autoplace.resource_autoplace_settings{
-      name = autoplaceName.."-science-ore",      
+      name = "logistic-science-ore",      
       order = "x",
       base_density = 10,
       has_starting_area_placement = hasStartingAreaPlacement,

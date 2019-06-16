@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.10
+  Bugfixes:
+    - Fixed autoplace control naming issue when Bob's Tech is detected.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.1.9
   Bugfixes:
     - Temporary crash fix for Space Exploration and BobTech mod combination.
