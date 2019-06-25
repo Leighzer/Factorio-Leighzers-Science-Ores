@@ -21,8 +21,7 @@ function AddResource(resourceName,hasStartingAreaPlacement)
       name = resourceName.."-science-ore",
       order = "x",
       base_density = 10,
-      has_starting_area_placement = hasStartingAreaPlacement,
-      resource_index = resource_autoplace.get_next_resource_index() + 64,
+      has_starting_area_placement = hasStartingAreaPlacement,      
       regular_rq_factor_multiplier = 1.10,
       starting_rq_factor_multiplier = 1.5
     },
@@ -68,8 +67,7 @@ function AddLogisticScienceOreEntity()
       name = "logistic-science-ore",      
       order = "x",
       base_density = 10,
-      has_starting_area_placement = hasStartingAreaPlacement,
-      resource_index = resource_autoplace.get_next_resource_index() + 64,
+      has_starting_area_placement = hasStartingAreaPlacement,      
       regular_rq_factor_multiplier = 1.10,
       starting_rq_factor_multiplier = 1.5
     },
@@ -134,8 +132,7 @@ if mods["bobtech"] and leighzermods.leighzerscienceores.advancedLogisticEnabled 
       name = "advanced-logistic-science-ore",
       order = "x",
       base_density = 10,
-      has_starting_area_placement = hasStartingAreaPlacement,
-      resource_index = resource_autoplace.get_next_resource_index() + 64,
+      has_starting_area_placement = hasStartingAreaPlacement,      
       regular_rq_factor_multiplier = 1.10,
       starting_rq_factor_multiplier = 1.5
     },
