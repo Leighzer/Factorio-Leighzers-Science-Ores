@@ -9,10 +9,17 @@ data:extend(
     },
     {
         type = "bool-setting",
+        name = "infiniteScienceOre",
+        setting_type = "startup",
+        default_value = false,
+        order = "b"
+    },
+    {
+        type = "bool-setting",
         name = "isAutomationScienceOreEnabled",
         setting_type = "startup",
         default_value = true,
-        order = "b"
+        order = "c"
     },
     {
         type = "int-setting",
@@ -21,14 +28,14 @@ data:extend(
         default_value = 1,
         minimum_value = 1,
         maximum_value = 100000,
-        order = "c"
+        order = "d"
     },  
     {
         type = "bool-setting",
         name = "isMilitaryScienceOreEnabled",
         setting_type = "startup",
         default_value = true,
-        order = "f"
+        order = "g"
     },
     {
         type = "int-setting",
@@ -37,14 +44,14 @@ data:extend(
         default_value = 25,
         minimum_value = 1,
         maximum_value = 100000,
-        order = "g"
+        order = "h"
     },
     {
         type = "bool-setting",
         name = "isChemicalScienceOreEnabled",
         setting_type = "startup",
         default_value = true,
-        order = "h"
+        order = "i"
     },
     {
         type = "int-setting",
@@ -53,7 +60,7 @@ data:extend(
         default_value = 100,
         minimum_value = 1,
         maximum_value = 100000,
-        order = "i"
+        order = "j"
     },
 
     {
@@ -61,7 +68,7 @@ data:extend(
         name = "isProductionScienceOreEnabled",
         setting_type = "startup",
         default_value = true,
-        order = "j"
+        order = "k"
     },
     {
         type = "int-setting",
@@ -70,7 +77,7 @@ data:extend(
         default_value = 250,
         minimum_value = 1,
         maximum_value = 100000,
-        order = "k"
+        order = "l"
     },
 
     {
@@ -78,7 +85,7 @@ data:extend(
         name = "isUtilityScienceOreEnabled",
         setting_type = "startup",
         default_value = true,
-        order = "l"
+        order = "m"
     },
     {
         type = "int-setting",
@@ -87,7 +94,7 @@ data:extend(
         default_value = 500,
         minimum_value = 1,
         maximum_value = 100000,
-        order = "m"
+        order = "n"
     },
 
     {
@@ -95,7 +102,7 @@ data:extend(
         name = "isSpaceScienceOreEnabled",
         setting_type = "startup",
         default_value = true,
-        order = "n"
+        order = "o"
     },
     {
         type = "int-setting",
@@ -104,7 +111,7 @@ data:extend(
         default_value = 1000,
         minimum_value = 1,
         maximum_value = 100000,
-        order = "o"
+        order = "p"
     },
 })
 
@@ -115,7 +122,7 @@ if mods["bobtech"] then
             name = "isAdvancedLogisticScienceOreEnabled",
             setting_type = "startup",
             default_value = true,
-            order = "i-a"
+            order = "h-a"
         },
         {
             type = "int-setting",
@@ -124,14 +131,14 @@ if mods["bobtech"] then
             default_value = 175,
             minimum_value = 1,
             maximum_value = 100000,
-            order = "i-b"
+            order = "h-b"
         },
         {
             type = "bool-setting",
             name = "isLogisticScienceOreEnabled",
             setting_type = "startup",
             default_value = true,
-            order = "d",
+            order = "e",
             localised_name = {"mod-setting-name.isLogisticScienceOreEnabled", "Transport"},
             localised_description = {"mod-setting-description.isLogisticScienceOreEnabled", "Transport"}
         },
@@ -142,7 +149,7 @@ if mods["bobtech"] then
             default_value = 10,
             minimum_value = 1,
             maximum_value = 100000,
-            order = "e",
+            order = "f",
             localised_name = {"mod-setting-name.LogisticScienceOreRequirement", "Transport"}
         },        
     })
@@ -154,7 +161,7 @@ else
             name = "isLogisticScienceOreEnabled",
             setting_type = "startup",
             default_value = true,
-            order = "d",
+            order = "e",
             localised_name = {"mod-setting-name.isLogisticScienceOreEnabled", "Logistic"},
             localised_description = {"mod-setting-description.isLogisticScienceOreEnabled", "Logistic"}
         },
@@ -165,7 +172,7 @@ else
             default_value = 10,
             minimum_value = 1,
             maximum_value = 100000,
-            order = "e",
+            order = "f",
             localised_name = {"mod-setting-name.LogisticScienceOreRequirement", "Logistic"}
 
         }

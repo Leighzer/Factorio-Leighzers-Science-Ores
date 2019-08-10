@@ -63,6 +63,8 @@ if not leighzermods.leighzerscienceores then
             leighzermods.leighzerscienceores.isStartingAreaEnabled.advancedLogistic = true
         end
     end
+
+    leighzermods.leighzerscienceores.infiniteScienceOre = settings.startup["infiniteScienceOre"].value
 end
 
 if not leighzermods.leighzerscienceores.productivityEnabledRecipes then --list of recipe names that are going to get productivity modules enabled
