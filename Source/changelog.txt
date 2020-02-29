@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.0
+  Changes:
+    - Updated to 0.18
+  Bugfixes:
+    - Update ore particle type to "optimized-particle" from deprecated "particle" type.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.1.12
   Changes:
     - Added setting to make science ores infinite, much like oil.

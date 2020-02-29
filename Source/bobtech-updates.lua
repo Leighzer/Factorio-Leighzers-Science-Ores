@@ -9,7 +9,7 @@ if bobmods and bobmods.tech then
             automationScienceResource.map_color = leighzermods.leighzerscienceores.tints.utility                        
             automationScienceResource.stages.sheet.filename = "__leighzerscienceores__/graphics/entity/ore/utility-science-ore.png"
 
-            automationScienceOreParticle = data.raw["particle"]["automation-science-ore-particle"]
+            automationScienceOreParticle = data.raw["optimized-particle"]["automation-science-ore-particle"]
             automationScienceOreParticle.pictures[1].filename = "__leighzerscienceores__/graphics/entity/ore-particle/utility-science-ore-particle-1.png"          
             automationScienceOreParticle.pictures[2].filename = "__leighzerscienceores__/graphics/entity/ore-particle/utility-science-ore-particle-2.png"           
             automationScienceOreParticle.pictures[3].filename = "__leighzerscienceores__/graphics/entity/ore-particle/utility-science-ore-particle-3.png"           
@@ -25,7 +25,7 @@ if bobmods and bobmods.tech then
             logisticScienceResource.map_color = leighzermods.leighzerscienceores.tints.automation            
             logisticScienceResource.stages.sheet.filename = "__leighzerscienceores__/graphics/entity/ore/automation-science-ore.png"
 
-            logisticScienceOreParticle = data.raw["particle"]["logistic-science-ore-particle"]
+            logisticScienceOreParticle = data.raw["optimized-particle"]["logistic-science-ore-particle"]
             logisticScienceOreParticle.pictures[1].filename = "__leighzerscienceores__/graphics/entity/ore-particle/automation-science-ore-particle-1.png"          
             logisticScienceOreParticle.pictures[2].filename = "__leighzerscienceores__/graphics/entity/ore-particle/automation-science-ore-particle-2.png"           
             logisticScienceOreParticle.pictures[3].filename = "__leighzerscienceores__/graphics/entity/ore-particle/automation-science-ore-particle-3.png"           
@@ -41,7 +41,7 @@ if bobmods and bobmods.tech then
             utilityScienceResource.map_color = leighzermods.leighzerscienceores.tints.logistic            
             utilityScienceResource.stages.sheet.filename = "__leighzerscienceores__/graphics/entity/ore/logistic-science-ore.png"
 
-            utilityScienceOreParticle = data.raw["particle"]["utility-science-ore-particle"]
+            utilityScienceOreParticle = data.raw["optimized-particle"]["utility-science-ore-particle"]
             utilityScienceOreParticle.pictures[1].filename = "__leighzerscienceores__/graphics/entity/ore-particle/logistic-science-ore-particle-1.png"          
             utilityScienceOreParticle.pictures[2].filename = "__leighzerscienceores__/graphics/entity/ore-particle/logistic-science-ore-particle-2.png"           
             utilityScienceOreParticle.pictures[3].filename = "__leighzerscienceores__/graphics/entity/ore-particle/logistic-science-ore-particle-3.png"           
