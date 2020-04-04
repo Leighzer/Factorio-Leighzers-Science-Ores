@@ -1,5 +1,5 @@
 
-function AddResource(resourceName,hasStartingAreaPlacement)
+function AddResource(resourceName,hasStartingAreaPlacement,order)
   data:extend({   
     {
     type = "resource",
@@ -7,7 +7,7 @@ function AddResource(resourceName,hasStartingAreaPlacement)
     icon = "__leighzerscienceores__/graphics/icons/"..resourceName.."-science-ore.png",
     icon_size = 32,
     flags = {"placeable-neutral"},
-    order="h",
+    order=order,
     map_color = leighzermods.leighzerscienceores.tints[resourceName],--color used for ore patch when viewed from mini map
     minable =
     {     
@@ -51,7 +51,7 @@ function AddLogisticScienceOreEntity()
     icon = "__leighzerscienceores__/graphics/icons/logistic-science-ore.png",
     icon_size = 32,
     flags = {"placeable-neutral"},
-    order="h",
+    order="z-b",
     map_color = leighzermods.leighzerscienceores.tints["logistic"],--color used for ore patch when viewed from mini map
     localised_name = {"entity-name.logistic-science-ore", "Logistic"},
     localised_description = {"entity-description.logistic-science-ore", "Logistic"},
@@ -89,25 +89,25 @@ function AddLogisticScienceOreEntity()
 end
 
 if leighzermods.leighzerscienceores.automationEnabled then
-  AddResource('automation',leighzermods.leighzerscienceores.isStartingAreaEnabled.automation)
+  AddResource('automation',leighzermods.leighzerscienceores.isStartingAreaEnabled.automation,"z-a")
 end
 if leighzermods.leighzerscienceores.logisticEnabled then
   AddLogisticScienceOreEntity()
 end
 if leighzermods.leighzerscienceores.militaryEnabled then
-  AddResource('military',leighzermods.leighzerscienceores.isStartingAreaEnabled.military)
+  AddResource('military',leighzermods.leighzerscienceores.isStartingAreaEnabled.military,"z-c")
 end
 if leighzermods.leighzerscienceores.chemicalEnabled then
-  AddResource('chemical',leighzermods.leighzerscienceores.isStartingAreaEnabled.chemical)
+  AddResource('chemical',leighzermods.leighzerscienceores.isStartingAreaEnabled.chemical,"z-d")
 end
 if leighzermods.leighzerscienceores.productionEnabled then
-  AddResource('production',leighzermods.leighzerscienceores.isStartingAreaEnabled.production)
+  AddResource('production',leighzermods.leighzerscienceores.isStartingAreaEnabled.production,"z-e")
 end
 if leighzermods.leighzerscienceores.utilityEnabled then
-  AddResource('utility',leighzermods.leighzerscienceores.isStartingAreaEnabled.utility)
+  AddResource('utility',leighzermods.leighzerscienceores.isStartingAreaEnabled.utility,"z-f")
 end
 if leighzermods.leighzerscienceores.spaceEnabled then
-  AddResource('space',leighzermods.leighzerscienceores.isStartingAreaEnabled.space)
+  AddResource('space',leighzermods.leighzerscienceores.isStartingAreaEnabled.space,"z-g")
 end
 
 if mods["bobtech"] and leighzermods.leighzerscienceores.advancedLogisticEnabled then
@@ -118,7 +118,7 @@ if mods["bobtech"] and leighzermods.leighzerscienceores.advancedLogisticEnabled 
     icon = "__leighzerscienceores__/graphics/icons/advanced-logistic-science-ore.png",
     icon_size = 32,
     flags = {"placeable-neutral"},
-    order="h",
+    order="z-d-a",
     map_color = leighzermods.leighzerscienceores.tints.advancedLogistic,--color used for ore patch when viewed from mini map
     minable =
     {     
