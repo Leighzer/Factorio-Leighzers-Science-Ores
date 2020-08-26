@@ -1,4 +1,23 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.0
+  Changes:
+    - Added dependency to library mod.
+    - Added dynamic science detection and science ore creation.
+    - Removed majority of settings to customize science ore generation.
+    - Added Compatibility.md for instructions on customizing science ore generation.
+    - Added setting to enable/disable morphite to science ore recipe creation
+    - New graphics! Removed old graphics.
+    - Updated thumbnail.
+    - For sciences with total raw over 65535, science crystals are now required in the alternate science pack recipe. This is so that we can get around the max 65535 single ingredient amount for a recipe.
+    - Removed dependency for Bob's Tech. With this design bob should be able to set the science ore fields on the data.raw.tool items and customize the science ores generated.    
+    - Added Science ore recipe multiplier setting to allow light tuning of science ore recipes.
+---------------------------------------------------------------------------------------------------
+Version: 0.2.2
+  Changes:
+    - Added dependency to library mod.
+    - Removed infinite ore funcitonality - there are other mods that do this.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.2.1
   Changes:
     - Updated item and resource menu ordering for science ores.  
