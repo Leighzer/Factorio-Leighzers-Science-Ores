@@ -2,7 +2,17 @@
 for k,v in pairs(data.raw.tool) do    
     if (not v.leighzerscienceoresDisabled) then
 
-        local sciencePackRecipe = data.raw.recipe[k]
+        local recipeDict = leighzermods.utils.getRecipesThatOnlyContainProduct(k,false)
+        local sciencePackRecipe = nil
+        if recipeDict[k] then -- prefer recipe with science pack name
+            sciencePackRecipe = recipeDict[k]
+        else
+            for kk,vv in pairs(recipeDict) do -- otherwise take first recipe from our dict
+                sciencePackRecipe = vv
+                break
+            end
+        end
+
         local itemLaunchedInSpaceYieldsSciencePackRecipe = nil
         local rocketLaunchProductAmount = nil
         for kk,vv in pairs(data.raw.item) do
@@ -62,10 +72,19 @@ for k,v in pairs(data.raw.tool) do
                 local energy_required = nil
                 local order = nil
                 local enabled = nil
+                local resultCount = 1
                 if (sciencePackRecipe) then
                     energy_required = sciencePackRecipe.energy_required
                     order = sciencePackRecipe.order
                     enabled = sciencePackRecipe.enabled
+                    if (sciencePackRecipe.results and sciencePackRecipe.results[1]) then
+                        local res = sciencePackRecipe.results[1]
+                        resultCount = res.amount or res[2]
+                    elseif (sciencePackRecipe.result_count) then
+                        resultCount = sciencePackRecipe.result_count
+                    else
+                        resultCount = 1
+                    end
                 else 
                     energy_required = 40 -- assume 40 energy required for launching things into space.. 
                     order = v.order
@@ -98,7 +117,7 @@ for k,v in pairs(data.raw.tool) do
                     energy_required = energy_required,                
                     ingredients = {{name=scienceOreName,amount=normalRecipeCost % (leighzermods.constants.maxIngredientAmount + 1),type="item"}},
                     result = k,
-                    result_count = 1,
+                    result_count = resultCount,
                     subgroup = leighzermods.leighzerscienceores.scienceOreRecipeSubgroup,
                     order = order,
                     enabled = enabled,

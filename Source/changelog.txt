@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.1
+  Changes:
+    - Update logic behind which science pack recipe is worked off of instead of relying on a recipe's name being exactly the same as the science pack. We now search for a recipe that only makes the science pack.
+    - Add logic to copy over result_count from original science pack recipe (with some fall backs - did discover I'm not considering probabalistic recipes - will leave those unsupported for now).
+    - Simplified mod summary.
+  Bugfixes:
+    - Fix recipe gen (result count wasn't being accounted for when making science ore recipes).
+---------------------------------------------------------------------------------------------------
 Version: 0.3.0
   Changes:
     - Added dependency to library mod.
