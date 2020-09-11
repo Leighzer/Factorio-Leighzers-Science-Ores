@@ -1,4 +1,8 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.2  
+  Bugfixes:
+    - Fix not being able to use prod modules with science ore recipes
+---------------------------------------------------------------------------------------------------
 Version: 0.3.1
   Changes:
     - Update logic behind which science pack recipe is worked off of instead of relying on a recipe's name being exactly the same as the science pack. We now search for a recipe that only makes the science pack.

@@ -136,7 +136,8 @@ for k,v in pairs(data.raw.tool) do
 
                 data:extend({
                     scienceOreRecipe
-                })            
+                })
+                table.insert(leighzermods.productivityEnabledRecipes, scienceOreRecipe.name)
         end        
     end
 end
