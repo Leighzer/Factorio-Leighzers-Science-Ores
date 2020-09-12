@@ -1,11 +1,11 @@
 {
   "name": "leighzerscienceores",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "title": "Leighzer's Science Ores",
   "author": "Leighzer",
   "contact": "Please message me on the factorio forums my username is leighzer.",
   "homepage": "",
   "factorio_version": "1.0",
-  "dependencies": [ "base >= 1.0.0", "leighzerlib >= 0.2.1"],
+  "dependencies": [ "base >= 1.0.0", "leighzerlib >= 0.2.1", "(?) leighzergreedyscience >= 0.2.1"],
   "description": "Adds new ores that can be processed directly into science packs."
 }

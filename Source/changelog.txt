@@ -1,4 +1,8 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.3  
+  Changes:
+    - Add hidden optional dependency to Leighzer's Greedy Science to force correct mod load order.
+---------------------------------------------------------------------------------------------------
 Version: 0.3.2  
   Bugfixes:
     - Fix not being able to use prod modules with science ore recipes
