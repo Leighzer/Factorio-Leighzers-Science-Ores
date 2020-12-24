@@ -25,58 +25,53 @@ leighzermods.utils.createItemSubgroup(leighzermods.leighzerscienceores.scienceCr
 -- row in crafting tab for alternate science pack recipes 
 leighzermods.utils.createItemSubgroup(leighzermods.leighzerscienceores.scienceOreRecipeSubgroup,"intermediate-products",leighzermods.leighzerscienceores.scienceOreRecipeSubgroupOrder)
 
--- define science ore fields for vanilla science packs (really all that needs to be defined is the ore tint, but other fields are here for reference)
+-- define science ore fields for vanilla science packs
 local vanillaSciencePackData = {}
 vanillaSciencePackData["automation-science-pack"] = {
-    leighzerscienceoresDisabled = false,
-    leighzerscienceoresCostOverride = nil,    
-    leighzerscienceoresOreTintName = "fire_brick",
-    leighzerscienceoresStartingAreaEnabled = true
+    disabled = false,
+    costOverride = nil,    
+    oreTintName = "fire_brick",
+    startingAreaEnabled = true
 }
 vanillaSciencePackData["logistic-science-pack"] = {
-    leighzerscienceoresDisabled = false,
-    leighzerscienceoresCostOverride = nil,    
-    leighzerscienceoresOreTintName = "lime_green",
-    leighzerscienceoresStartingAreaEnabled = true
+    disabled = false,
+    costOverride = nil,    
+    oreTintName = "lime_green",
+    startingAreaEnabled = true
 }
 vanillaSciencePackData["military-science-pack"] = {
-    leighzerscienceoresDisabled = false,
-    leighzerscienceoresCostOverride = nil,    
-    leighzerscienceoresOreTintName = "light_slate_gray",
-    leighzerscienceoresStartingAreaEnabled = true
+    disabled = false,
+    costOverride = nil,    
+    oreTintName = "light_slate_gray",
+    startingAreaEnabled = true
 }
 vanillaSciencePackData["chemical-science-pack"] = {
-    leighzerscienceoresDisabled = false,
-    leighzerscienceoresCostOverride = nil,    
-    leighzerscienceoresOreTintName = "cyan",
-    leighzerscienceoresStartingAreaEnabled = false
+    disabled = false,
+    costOverride = nil,    
+    oreTintName = "cyan",
+    startingAreaEnabled = false
 }
 vanillaSciencePackData["production-science-pack"] = {
-    leighzerscienceoresDisabled = false,
-    leighzerscienceoresCostOverride = nil,    
-    leighzerscienceoresOreTintName = "dark_orchid",
-    leighzerscienceoresStartingAreaEnabled = false
+    disabled = false,
+    costOverride = nil,    
+    oreTintName = "dark_orchid",
+    startingAreaEnabled = false
 }
 vanillaSciencePackData["utility-science-pack"] = {
-    leighzerscienceoresDisabled = false,
-    leighzerscienceoresCostOverride = nil,    
-    leighzerscienceoresOreTintName = "golden_rod",
-    leighzerscienceoresStartingAreaEnabled = false    
+    disabled = false,
+    costOverride = nil,    
+    oreTintName = "golden_rod",
+    startingAreaEnabled = false    
 }
 vanillaSciencePackData["space-science-pack"] = {
-    leighzerscienceoresDisabled = false,
-    leighzerscienceoresCostOverride = nil,    
-    leighzerscienceoresOreTintName = "white",
-    leighzerscienceoresStartingAreaEnabled = false
+    disabled = false,
+    costOverride = nil,    
+    oreTintName = "white",
+    startingAreaEnabled = false
 }
 
 for k,v in pairs(data.raw.tool) do -- for each science pack item
     if (vanillaSciencePackData[k]) then -- if we have data for it
-        for kk,vv in pairs(vanillaSciencePackData[k]) do
-            if (v[kk] == nil) then -- if there isn't already a value there
-                v[kk] = vv -- load each field into the item prototype
-                -- our dynamic resource creator will examine these in data-updates.lua and use them to make decisions 
-            end
-        end
+        v.leighzerscienceores = vanillaSciencePackData[k] -- load science ore data into the science pack item
     end
 end

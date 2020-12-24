@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.0
+  Changes:
+    - Renamed compatibility fields.
+    - Tweaked where science ore creator looks for compatibility data.
+    - Updated Compatbility.md with latest instructions given above change.
+    - Small code refactoring.
+    - Version bump to 1.1 .
+---------------------------------------------------------------------------------------------------
 Version: 0.3.3  
   Changes:
     - Add hidden optional dependency to Leighzer's Greedy Science to force correct mod load order.
